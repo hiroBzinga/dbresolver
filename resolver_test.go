@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"testing"
 
-	"github.com/bxcodec/dbresolver"
+	"github.com/hiroBzinga/dbresolver"
 )
 
 func TestWrapDBWithMultiDBs(t *testing.T) {
