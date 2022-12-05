@@ -10,6 +10,7 @@ func WrapDBs(dbs ...*sql.DB) DB {
 		panic("required primary connection")
 	}
 	return &DBImpl{
+		DB:              dbs[0],
 		primarydb:       dbs[0],
 		replicas:        dbs[1:],
 		totalConnection: len(dbs),

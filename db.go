@@ -40,6 +40,7 @@ type DB interface {
 // forming a single ReadWrite (primary) with multiple ReadOnly(replicas) database.
 // Reads and writes are automatically directed to the correct db connection
 type DBImpl struct {
+	*sql.DB
 	primarydb       *sql.DB
 	replicas        []*sql.DB
 	totalConnection int
